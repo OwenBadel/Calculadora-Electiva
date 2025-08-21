@@ -38,6 +38,21 @@ void sumar(){
     }
 
     @Test
+    void raizcuadrada() {
+        assertEquals(2, Calc.raizcuadrada(4));
+    }
+
+    @Test
+    void raizcuadradaNegativos() {
+    Exception ex = assertThrows(IllegalArgumentException.class, () -> Calc.raizcuadrada(-1));
+    assertEquals("No se puede obtener la raizcuadra  de numeros negativos.", ex.getMessage());
+
+
+    }
+
+
+
+    @Test
     void restar() {
     assertEquals(10, Calc.restar(20,10));
 
