@@ -45,12 +45,22 @@ void sumar(){
     @Test
     void raizcuadradaNegativos() {
     Exception ex = assertThrows(IllegalArgumentException.class, () -> Calc.raizcuadrada(-1));
-    assertEquals("No se puede obtener la raizcuadra  de numeros negativos.", ex.getMessage());
+    assertEquals("No se puede calcular la raíz cuadrada de un número negativo.", ex.getMessage());
 
 
     }
 
+    @Test
+    void logaritmoNatural() {
+    assertEquals(2.302585092994046,Calc.calcularLogaritmoNatural(10));
+    }
 
+    @Test
+    void logaritmoNaturalNegativos() {
+    Exception ex = assertThrows(IllegalArgumentException.class, () -> Calc.calcularLogaritmoNatural(-10));
+    assertEquals("El logaritmo natural solo se puede calcular para números positivos.", ex.getMessage());
+
+    }
 
     @Test
     void restar() {

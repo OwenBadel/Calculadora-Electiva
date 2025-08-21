@@ -21,7 +21,7 @@ public class Calculadora {
         return a - b;
     }
 
-    public static double raizcuadrada(double numero) {
+    public double raizcuadrada(double numero) {
 
         if (numero < 0)
             throw new IllegalArgumentException("No se puede calcular la raíz cuadrada de un número negativo.");
@@ -31,6 +31,18 @@ public class Calculadora {
 
 
     }
+
+        public  double calcularLogaritmoNatural(double numero) {
+
+            if (numero <= 0) {
+                throw new IllegalArgumentException("El logaritmo natural solo se puede calcular para números positivos.");
+            }
+            return Math.log(numero);
+        }
+
+
+
+
 }
 
 
